@@ -1,4 +1,4 @@
-# Made by Nazarishin Nikolay for Media lab for testing
+# Made by Nazarishin Nikolay for Maklai test for testing
 
 ##### 1. Install node.js and npm
 [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm)
