@@ -1,0 +1,20 @@
+.va-middle{ vertical-align: middle; }
+.ta-center{ text-align: center; }
+.ta-left{ text-align: left; }
+.ta-right{ text-align: right; }
+
+.text-accent { 
+  fill: $primary-color; 
+  color: $primary-color; 
+  font-size: 14px;
+  font-weight: 500;
+}
+.text-main { 
+  fill: $main-color; 
+  color: $main-color; 
+  font-size: 14px; 
+}
+
+.reset-list{ @include reset-list; }
+.clearfix{ @include clearfix; }
+.container{ @include container; }

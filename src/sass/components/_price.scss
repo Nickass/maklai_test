@@ -1,0 +1,40 @@
+.price {
+  font-family: 'Roboto';
+  font-size: 24px;
+  line-height: 1em;
+
+  &__num {
+    font-size: em(36px, 24px);
+    line-height: 1em;
+    white-space: nowrap;
+  }
+  &__curr {
+    font-size: em(24px, 36px);
+    line-height: 1em;
+  }
+  &__desc {
+    font-size: em(14px, 24px);
+    line-height: 1em;
+    margin-top: 5px;
+  }
+  &__before {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    color: #ababab;
+    margin-bottom: 4px;
+    white-space: nowrap;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      border-color: inherit;
+      border-bottom: 1px solid;
+    }
+  }
+}

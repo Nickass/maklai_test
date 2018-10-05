@@ -1,0 +1,43 @@
+mixin p-more-item({text, icon, info})
+  li.p-more__item
+    if(icon)
+      span.p-more__icon(class=icon.accent?'text-accent':'')
+        if(icon.name)
+          +icon(icon.name)
+        else
+          !=icon
+    !=text
+    if(info)
+      div(title="some info title").p-more__icon.p-more__icon--info
+        +icon('info')
+
+mixin p-more(args, add = false)
+  div(role="group").p-more&attributes(attributes)
+    if args.info
+      ul.p-more__info
+        each inf in args.info
+          +p-more-item(inf)
+
+    if args.advantages
+      ul.p-more__advantages
+        each inf in args.advantages
+          +p-more-item(inf)
+    if args.price
+      .p-more__price
+        .price
+          if(args.price.num)
+            .price__num!=args.price.num
+              span.price__curr   $
+          if(args.price.before)
+            .price__before
+              !=args.price.before
+              span.price__curr   $
+          if(args.price.desc)
+            div.price__desc!=args.price.desc
+    .p-more__action
+      button(type="button").btn.btn--accent Book now
+    if(add)
+      footer.p-more__footer
+        .p-more__additional
+          +icon('pool').va-middle      
+          | Access to swimming pool

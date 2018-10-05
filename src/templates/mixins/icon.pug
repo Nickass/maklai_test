@@ -1,0 +1,4 @@
+mixin icon(name)
+  svg(role="img",class="icon-"+name).icon&attributes(attributes)
+    title='Vector presentation of "' + name + '" icon.'
+    use(xlink:href="icons/sprite.svg#" + name)

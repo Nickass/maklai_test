@@ -1,0 +1,41 @@
+mixin p-desc
+  .p-desc(role="tree")
+    h2(role="treeitem").p-desc__title Room settings
+    ul(role="group").p-desc__list
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('rule')
+        | Square 23 m<sup>2</sup>
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('bed')
+        span(style="position: relative; top: -7px;") King-size bed or Double bed
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('group')
+        | 2 adults
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('no-smoking')
+        | No smoking
+    hr.p-desc__delimiter
+    h2(role="treeitem").p-desc__title Top facilities
+    ul(role="group").p-desc__list
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('wifi').text-main
+        | Free Wi-Fi
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('shower').text-main
+        | Shower
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('shower').text-main
+        | Free in-room safe
+      li.p-desc__item
+        span.p-desc__icon
+          +icon('conditioner').text-main
+        | Air conditioning
+    footer.p-desc__footer
+      a(href="#").btn.btn--link + more details

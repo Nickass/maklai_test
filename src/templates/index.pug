@@ -1,0 +1,100 @@
+include mixins/icon
+include components/p-desc
+include components/p-pic
+include components/p-more
+html
+  head
+    title Maklai test task
+    meta(http-equiv="Content-Type",content="text/html; charset=UTF-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    link(href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Roboto:300,400,500,700",rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="./css/style.css")
+  -
+    var mores = [
+      { 
+        info: [
+          {
+            text: '<span class="text-accent">Free cancellation</span>', 
+            icon: { name: 'check', accent: true }, 
+            info: true
+          },
+          {
+            text: 'Pay at hotel',
+            info: true,
+            icon: '<span class="va-middle">&#8226;</span>',
+          },
+        ],
+        advantages: [
+          {
+            text: 'Free wi-fi',
+            icon: {name: 'wifi',accent:true}
+          },
+          {
+            text: 'Breakfast included', 
+            icon: {name: 'coffee',accent:true},
+          },
+          {
+            text: 'King-size bed', 
+            icon: {name: 'bed-2'}
+          }
+        ],
+        price: {
+          num: '22 848',
+          desc: '4 night'
+        }
+      },
+      {
+        info: [
+          {
+            text: '<span class="text-accent">Free cancellation</span>', 
+            icon: {name: 'check', accent: true}, 
+            info: true
+          },
+          {
+            text: '1€ deposit', 
+            icon: '&#8226;', 
+            info: true
+          },
+        ],
+        advantages: [
+          {
+            text: 'Paid wi-fi',
+            icon: {name: 'wifi',accent:true},
+            info: true
+          },
+          {
+            text: 'All included', 
+            icon: {name: 'silverware',accent:true},
+          },
+          {
+            text: 'King-size bed', 
+            icon: {name: 'bed-2'}
+          }
+        ],
+        price: {
+          num: '23 520',
+          before: '24 520',
+          desc: '<span class="text-accent">Best price for 4 night</span>'
+        }
+      }
+    ];
+  body
+    article.product
+      .product__main
+        header.product__pic
+          +p-pic
+        .product__desc
+          +p-desc
+      p.product__more Not included in room price: 7% VAT, 5% City Tax
+      .product__more
+        +p-more(mores[0], true).p-more--dark
+      .product__more
+        +p-more(mores[1])
+      footer.product__footer
+        a(href="#").btn.btn--link + more 2 rates
+
+      
+    script(src="scripts/svg4everybody.min.js")
+    script(src="scripts/main.js")
+    script svg4everybody();
